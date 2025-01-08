@@ -10,42 +10,42 @@ class AnagramTest < Minitest::Test
   end
 
   def test_detects_two_anagrams
-    skip
+    # skip
     actual = match("master", ["stream", "pigeon", "maters"])
     expected = ["maters", "stream"]
     assert_equal expected, actual.sort
   end
 
   def test_does_not_detect_anagram_subsets
-    skip
+    # skip
     actual = match("good", ["dog", "goody"])
     expected = []
     assert_equal expected, actual
   end
 
   def test_detects_anagram
-    skip
+    # skip
     actual = match("listen", ["enlists", "google", "inlets", "banana"])
     expected = ["inlets"]
     assert_equal expected, actual
   end
 
   def test_detects_three_anagrams
-    skip
+    # skip
     actual = match("allergy", ["gallery", "ballerina", "regally", "clergy", "largely", "leading"])
     expected = ["gallery", "largely", "regally"]
     assert_equal expected, actual.sort
   end
 
   def test_detects_multiple_anagrams_with_different_case
-    skip
+    # skip
     actual = match("nose", ["Eons", "ONES"])
     expected = ["Eons", "ONES"]
     assert_equal expected, actual.sort
   end
 
   def test_does_not_detect_non_anagrams_with_identical_checksum
-    skip
+    # skip
     actual = match("mass", ["last"])
     expected = []
     assert_equal expected, actual
